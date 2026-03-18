@@ -8,3 +8,4 @@ backend/data/scg.db
 *.db
 .env
 .DS_Store
+backend/data/scg.db*
