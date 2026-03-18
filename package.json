@@ -1,0 +1,17 @@
+{
+  "name": "uanl-scg",
+  "version": "1.0.0",
+  "description": "Sistema de Contabilidad Gubernamental - UANL (CONAC Compliant)",
+  "private": true,
+  "workspaces": ["frontend", "backend", "shared"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=shared && npm run build --workspace=backend && npm run build --workspace=frontend",
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend && npm install --workspace=shared"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
